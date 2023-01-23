@@ -14,3 +14,12 @@ export const Footer_ = styled.footer`
     width: 50%;     
     height: 12vh;
 `;
+
+export const Container = styled.section`
+    display: 'flex'; 
+    width: '85%'; 
+    background: 'yellowgreen'; 
+    margin: '2rem auto 0'; 
+    height: '80vh';
+    padding: 10px;
+`

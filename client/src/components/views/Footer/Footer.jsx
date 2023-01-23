@@ -1,8 +1,6 @@
-import React from 'react';
+import React, { memo }	 from 'react';
 import { MDBFooter, MDBTypography, MDBIcon  } from 'mdb-react-ui-kit';
-import { memo } from 'react';
-import  logo_mjc  from '../../styled/eunsu/logo_mjc3.png';
-import { useCallback } from 'react';
+import logo_mjc  		 from '../../styled/eunsu/logo_mjc3.png';
 
 const Footer = memo(() => {
 	

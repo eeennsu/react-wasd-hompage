@@ -1,12 +1,12 @@
 import React from 'react';
 
-const Contest = () => {
+const ContestPage = () => {
 	return (
 		// 예시 스타일
 		<section style={{ display: 'flex', width: '85%', background: 'yellow', margin: '2rem auto 0', height: '80vh' }}>
-			Contest...
+			ContestPage...
 		</section>
 	);
 };
 
-export default Contest;
+export default ContestPage;
