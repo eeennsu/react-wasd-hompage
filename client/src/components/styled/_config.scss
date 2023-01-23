@@ -1,0 +1,43 @@
+// 공통적으로 사용할 수 있는 scss 변수 및 함수 설정 파일
+
+// google fonts 링크
+@import url('https://fonts.googleapis.com/css2?family=Alkalami&family=Bungee+Spice&family=Dancing+Script&family=Edu+TAS+Beginner:wght@500;600&family=Gamja+Flower&family=Gowun+Batang&family=Gowun+Dodum&family=IBM+Plex+Sans+KR:wght@500&family=Lobster&family=Montserrat:ital,wght@0,100;1,400&family=Nanum+Gothic+Coding&family=Nanum+Pen+Script&family=Nunito:ital,wght@1,300&family=Open+Sans:wght@300&family=Poor+Story&family=Roboto:wght@100;400;500&family=Shadows+Into+Light&display=swap');
+// 사용하고 싶은 폰트에 아래와 같은 폰트 적용 가능
+// font-family: 'Alkalami', serif;
+// font-family: 'Bungee Spice', cursive;
+// font-family: 'Dancing Script', cursive;
+// font-family: 'Edu TAS Beginner', cursive;
+// font-family: 'Gamja Flower', cursive;
+// font-family: 'Gowun Batang', serif;
+// font-family: 'Gowun Dodum', sans-serif;
+// font-family: 'IBM Plex Sans KR', sans-serif;
+// font-family: 'Lobster', cursive;
+// font-family: 'Montserrat', sans-serif;
+// font-family: 'Nanum Gothic Coding', monospace;
+// font-family: 'Nanum Pen Script', cursive;
+// font-family: 'Nunito', sans-serif;
+// font-family: 'Open Sans', sans-serif;
+// font-family: 'Poor Story', cursive;
+// font-family: 'Roboto', sans-serif;
+// font-family: 'Shadows Into Light', cursive;
+
+
+
+// 공통적으로 사용하는 변수 또는 함수를 저장하는 파일
+// 모바일 반응형 적용을 위한 함수 - 웹의 가로 사이즈가 767px이하에서 실행되는 css구역이다.
+@mixin mediaSm {
+    @media screen and (max-width: 767px){
+      @content;       //어떤 컨텐츠가 들어오는 구역 (함수의 내부)
+    }
+}
+
+
+// 다른 파일에서의 사용법
+/*
+    @include mediaSm{
+        div{
+            color: black;
+            margin: 0 auto;
+        }
+    }
+*/
