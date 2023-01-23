@@ -1,12 +1,12 @@
 import React from 'react';
 
-const Active = () => {
+const ActivePage = () => {
 	return (
 		// 예시 스타일
 		<section style={{ display: 'flex', width: '85%', background: 'green', margin: '2rem auto 0', height: '80vh' }}>
-			IntroPage
+			ActivePage
 		</section>
 	);
 };
 
-export default Active;
+export default ActivePage;
