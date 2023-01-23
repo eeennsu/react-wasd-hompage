@@ -1,6 +1,6 @@
 import React      from 'react';
 import Main       from './components/views/MainPage/MainPage';
-import './App.css';
+import './App.scss';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Intro      	 from './components/views/IntroPage/IntroPage';
 import Active     	 from './components/views/ActivePage/ActivePage';

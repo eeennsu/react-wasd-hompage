@@ -1,0 +1,65 @@
+@import './hover_css/underline-from-left';
+
+.font_Montserrat{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+#footer{
+    height: auto;
+    width: 100%;
+    margin: 0 auto;
+    border-top: 6px solid $footer-color2;
+    background: $footer-bg;
+
+    #top{
+        width: 45%;
+        margin: 0 auto;
+        font-size: 0.9em;   
+        
+        .infos{
+            color: grey;
+        }
+    }
+
+    #middle{
+        font-size: 0.8em;
+        color: rgb(75, 75, 65);
+        letter-spacing: 1px;
+    }
+
+    #bottom{
+        width: 35%;
+        margin: 0 auto;
+
+        /*#logo_mjc{
+          width: 200px;
+          height: 150px;
+        }*/      
+
+        .list{
+            li{                     
+                a{
+                    color: rgb(56, 52, 44);
+                    font-size: 0.8em;
+                }             
+
+                @include underline-from-left;
+            }
+        }
+    }    
+}
+
+@include mediaSm{
+    #footer{
+        #top{
+            width: 100%;
+            margin: 0 auto;
+        }      
+        
+        #bottom{
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+}
