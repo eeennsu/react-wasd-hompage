@@ -2,24 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 
 export const ParantDiv = styled.section`
-    min-height: calc(100vh - 300px);
+    min-height: calc(100vh - 65px);
     padding-top: 74px;  
-    background-color: grey;
-`;
-
-export const Footer_ = styled.footer`
-    display: flex;
-    justify-content: space-around;
-    margin: 0 auto;
-    width: 50%;     
-    height: 12vh;
+    background-color: #d6cfcf;        // 크기, 위치 확인용 배경색
 `;
 
 export const Container = styled.section`
-    display: 'flex'; 
-    width: '85%'; 
-    background: 'yellowgreen'; 
-    margin: '2rem auto 0'; 
-    height: '80vh';
-    padding: 10px;
-`
+    width: 85%; 
+    background: yellowgreen; 
+    margin: ${props => props.mt || '2rem'} auto 0 auto; 
+    height: auto;
+`;
