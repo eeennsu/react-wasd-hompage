@@ -14,7 +14,7 @@ const Footer = () => {
 	return (
 		// 예시 스타일
 		<MDBFooter id='footer'>		
-			<div id='top' className='d-md-flex justify-content-center align-items-center pt-0 p-1'>
+			<div id='top' className='d-md-flex justify-content-center align-items-center p-1'>
 				<div className='d-none d-lg-block'>
 					<Popover title='WASD Logo' content={popoverLogo}>
 						<img src={logo_wasd} alt='logo' id='logo_wasd' />
