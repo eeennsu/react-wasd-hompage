@@ -3,7 +3,7 @@ import React from 'react';
 const Navbar = () => {
 	return (
 		// 예시 스타일
-		<nav style={{ display: 'flex', background: 'skyblue', width: '100%', position: 'fixed', height: '11vh' }}>
+		<nav style={{ zIndex: 100, display: 'flex', background: 'skyblue', width: '100%', position: 'fixed', height: '11vh' }}>
 			<div style={{  }}>
 				<a href='/'>MainPage</a><br/>
 				<a href='/intro'>IntroPage</a><br/>
