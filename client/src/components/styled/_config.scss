@@ -9,6 +9,12 @@
     }
 }
 
+
+*{
+    margin: 0;
+}
+
+
 // 다른 파일에서의 사용법
 /*
     @include mediaSm{
