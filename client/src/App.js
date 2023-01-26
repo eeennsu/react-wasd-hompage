@@ -14,7 +14,8 @@ function App() {
 
     return (
         <BrowserRouter>
-			<Navbar />                                                  		  {/* 네비게이션 바  */}
+			<Navbar/>
+			<Navbar />                                              		  {/* 네비게이션 바  */}
 			<ParantDiv>
 				<Routes>
 					<Route exact path='/' element={<MainPage />}/>                {/*  메인 페이지   */}

@@ -1,4 +1,4 @@
-.info_parent{
+/* .info_parent{
     width: 85%;
     margin: 2rem auto 0 auto; 
     height: auto;
@@ -56,4 +56,59 @@
             width: 100%;
         }
     }   
+} */      // 버전 1
+
+
+.intro_parent{
+    width: 75%;    
+    margin: 8px auto 0 auto;
+    
+    .intro_cards_section{
+        padding: 30px 0 30px 0;
+        width: 85%;
+        margin: 0 auto;      
+
+        .info_content{
+            margin-right: 1rem;
+
+            &:active{
+                
+            }
+
+            .intro_card{     
+                min-height: 600px;
+                max-height: 800px; 
+                box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+                cursor: pointer;
+                
+                &:active{
+                    background-color: black;            // 클릭 효과
+                }
+            }
+        }        
+    }    
+}
+
+@include mediaSm{
+    .intro_parent{
+        width: 100%;    
+        margin: 8px auto 0 auto;
+        
+        .intro_cards_section{
+            padding: 15px 0 15px 0;
+            width: 85%;
+            margin: 0 auto;     
+        
+            .info_content{
+                margin-right: 0;
+                
+                .intro_card{
+                    text-align: center;
+                    margin-right: 0;
+                    margin-bottom: 1rem;
+                }
+            }          
+        }    
+    }
+    
 }
