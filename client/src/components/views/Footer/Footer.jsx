@@ -13,14 +13,14 @@ const Footer = () => {
 	
 	return (
 		// 예시 스타일
-		<MDBFooter id='footer'>		
+		<MDBFooter id='footer' >		
 			<div id='top' className='d-md-flex justify-content-center align-items-center p-1'>
 				<div className='d-none d-lg-block'>
 					<Popover title='WASD Logo' content={popoverLogo}>
 						<img src={logo_wasd} alt='logo' id='logo_wasd' />
 					</Popover>					
 				</div>
-				<div id='addr_num'>
+				<div id='addr_num' className='p-2 p-md-0'>
 					<div className='infos row d-flex'>
 						<div className='col-2 w-auto'>
 							<MDBIcon fas icon="map-marker-alt" />&nbsp;&nbsp; 주소
