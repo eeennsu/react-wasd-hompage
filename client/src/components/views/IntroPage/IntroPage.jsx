@@ -7,17 +7,17 @@ const IntroPage = () => {
 
     const cardInfos = useMemo(() => [
         {
-            title: '소개',
+            title: 'Wasd Introduce',
             content: 'Lorem ipsum dolor sit amet.',
             detail: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla in minima placeat officia pariatur, rem aut omnis beatae labore expedita quas inventore hic incidunt, quis voluptates ex sunt tempore fugit porro repudiandae vero, quo quam ut! Maiores eius deleniti natus odit accusamus minus sed dolorum, labore earum omnis, quos repudiandae sunt quo ratione reiciendis provident nemo eligendi repellendus excepturi tempora illum asperiores. Impedit quam quae, laudantium nam alias doloremque et, accusantium ullam dolor cumque sequi nisi rerum vitae exercitationem ab eligendi facere perspiciatis suscipit consequatur. Sunt, quae laboriosam! Expedita sunt blanditiis adipisci fugiat repellat, error vel maxime omnis corrupti mollitia?'
         },
         {
-            title: '비전',
+            title: 'Wasd vision',
             content: 'Lorem ipsum dolor sit amet.',
             detail: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla in minima placeat officia pariatur, rem aut omnis beatae labore expedita quas inventore hic incidunt, quis voluptates ex sunt tempore fugit porro repudiandae vero, quo quam ut! Maiores eius deleniti natus odit accusamus minus sed dolorum, labore earum omnis, quos repudiandae sunt quo ratione reiciendis provident nemo eligendi repellendus excepturi tempora illum asperiores. Impedit quam quae, laudantium nam alias doloremque et, accusantium ullam dolor cumque sequi nisi rerum vitae exercitationem ab eligendi facere perspiciatis suscipit consequatur. Sunt, quae laboriosam! Expedita sunt blanditiis adipisci fugiat repellat, error vel maxime omnis corrupti mollitia?'
         },
         {
-            title: '지도 교수',
+            title: 'Wasd instructor',
             content: 'Lorem ipsum dolor sit amet.',
             detail: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla in minima placeat officia pariatur, rem aut omnis beatae labore expedita quas inventore hic incidunt, quis voluptates ex sunt tempore fugit porro repudiandae vero, quo quam ut! Maiores eius deleniti natus odit accusamus minus sed dolorum, labore earum omnis, quos repudiandae sunt quo ratione reiciendis provident nemo eligendi repellendus excepturi tempora illum asperiores. Impedit quam quae, laudantium nam alias doloremque et, accusantium ullam dolor cumque sequi nisi rerum vitae exercitationem ab eligendi facere perspiciatis suscipit consequatur. Sunt, quae laboriosam! Expedita sunt blanditiis adipisci fugiat repellat, error vel maxime omnis corrupti mollitia?'
         }
@@ -29,7 +29,7 @@ const IntroPage = () => {
                 <div className='d-flex row justify-content-center'>                   
                     {
                         cardInfos.map((v) => (
-                            <div className="col-md-4" key={`intro-${v.title}`}>
+                            <div className="col-md-4 mb-4 mb-md-0" key={`intro-${v.title}`}>
                                 <InfoModal title={v.title} detail={v.detail} 
                                     content={<IntroCard title={v.title} content={v.content} />}/>                                                      
                             </div>

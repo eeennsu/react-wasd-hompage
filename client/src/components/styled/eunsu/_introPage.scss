@@ -71,18 +71,15 @@
         .info_content{
             margin-right: 1rem;
 
-            &:active{
-                
-            }
-
             .intro_card{     
                 min-height: 600px;
                 max-height: 800px; 
                 box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+                border-radius: 20px ;
                 cursor: pointer;
                 
-                &:active{
-                    background-color: black;            // 클릭 효과
+                &:hover{
+                    background-color: #A4A4A4;            // 클릭 효과
                 }
             }
         }        
