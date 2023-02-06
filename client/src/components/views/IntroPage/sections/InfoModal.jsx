@@ -10,12 +10,14 @@ import {
     MDBModalFooter,
   } from 'mdb-react-ui-kit';
 
+
+
 const InfoModal = memo(({ title, content, detail }) => {
 
     const [centredModal, setCentredModal] = useState(false);
-    const toggleShow = useCallback(() => {
-        setCentredModal(state => !state);
-    }, [centredModal]);
+    const toggleShow = () => {
+        setCentredModal(prev => !prev);
+    };
 
     return (
         <React.Fragment>
@@ -27,7 +29,7 @@ const InfoModal = memo(({ title, content, detail }) => {
                     <MDBModalContent>
                         <MDBModalHeader className='border border-bottom border-1'>
                             <MDBModalTitle>{ title }</MDBModalTitle>
-                            <MDBBtn className='btn-close' color='none' onClick={toggleShow}></MDBBtn>
+                            <MDBBtn className='btn-close' color='secondary' onClick={toggleShow}></MDBBtn>
                         </MDBModalHeader>
                         <MDBModalBody>
                             <p className='px-md-4'>
