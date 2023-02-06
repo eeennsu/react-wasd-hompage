@@ -1,10 +1,25 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useMemo } from 'react';
 import InfoModal from './sections/InfoModal';
 import IntroCard from './sections/IntroCard';
+import axios from 'axios';
+import { useState } from 'react';
+import { message } from 'antd';
 
 const IntroPage = () => {
 
+    /* 
+        [
+            { 
+                content : ~~,
+                detail : ~~,        
+            }    
+        ] 
+    */ 
+    const [introInfos, setIntroInfos] = useState([]);
+    
+
+    // 더미데이터
     const cardInfos = useMemo(() => [
         {
             title: 'Wasd Introduce',
@@ -23,15 +38,37 @@ const IntroPage = () => {
         }
     ], []);
 
+    // 서버에서 가져오기
+    // useEffect(() => {
+    //     (async () => {
+    //        try {
+    //         const response = await axios.get('server api link..');
+    //         const { success, results } = response.data;
+
+    //         if (success) {
+    //             console.log('Data fatched was successful!');
+    //         } else {
+    //             console.log('Data fatched was failed..');
+    //         }
+    //        } catch (error) {
+    //             console.log(error);
+    //             message.error(error);
+    //        }
+    //     })();
+    // }, []);
+
     return (
         <section className='intro_parent'>
             <div className='intro_cards_section'>
                 <div className='d-flex row justify-content-center'>                   
                     {
-                        cardInfos.map((v) => (
-                            <div className="col-md-4 mb-4 mb-md-0" key={`intro-${v.title}`}>
-                                <InfoModal title={v.title} detail={v.detail} 
-                                    content={<IntroCard title={v.title} content={v.content} />}/>                                                      
+                        cardInfos.map(({ title, content, detail }) => (
+                            <div className="col-md-4 mb-4 mb-md-0" key={`intro-${title}`}>
+                                <InfoModal 
+                                    title={title} 
+                                    detail={detail} 
+                                    content={<IntroCard title={title} content={content} />}
+                                />                                                      
                             </div>
                         ))
                     }                                                  
