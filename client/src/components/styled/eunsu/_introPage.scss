@@ -1,4 +1,5 @@
-/* .info_parent{
+/* 버전 1 
+.info_parent{
     width: 85%;
     margin: 2rem auto 0 auto; 
     height: auto;
@@ -56,11 +57,12 @@
             width: 100%;
         }
     }   
-} */      // 버전 1
+} */      
 
 
+// 버전2
 .intro_parent{
-    width: 75%;    
+    width: 80%;    
     margin: 8px auto 0 auto;
     
     .intro_cards_section{
@@ -74,8 +76,9 @@
             .intro_card{     
                 min-height: 600px;
                 max-height: 800px; 
-                box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-                border-radius: 20px ;
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+                border-radius: 20px;
+                transition: 0.2s ease-in;
                 cursor: pointer;
                 
                 &:hover{
