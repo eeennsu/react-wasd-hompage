@@ -1,75 +1,61 @@
 @import './hover_css/underline-from-left';
 
-.font_Montserrat{
+.font_Montserrat {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
+    font-weight: bolder;
 }
 
-#footer{
+#footer {
+    position: absolute;
+    bottom: 0;
     height: 150px;
     width: 100%;
     margin: 0 auto;
-    background:  #FFFFFF;
-    position: absolute;
-    
-    #top{
+    background: #fff;
+    white-space: nowrap;
+  
+    #top {
         width: 60%;
         margin: 0 auto;
         font-size: 0.9em;   
 
-        img#logo_wasd{
+        img#logo_wasd {
             width: 70%;
         }
 
-        .infos{
+        .infos {
             color: grey;
         }
 
-        #addr_num{
+        #addr_num {
             width: 60%;
         }
     }
 
-    #middle{
+    #middle {
         font-size: 0.8em;
         color: rgb(75, 75, 65);
         letter-spacing: 1px;
     }
 
-    #bottom{
-        width: 35%;
+    #bottom {
+        width: 45%;
         margin: 0 auto;
-
-        /*#logo_mjc{
-          width: 200px;
-          height: 150px;
-        }*/      
-
-        .list{
-            li{                     
-                a{
-                    color: rgb(56, 52, 44);
-                    font-size: 0.8em;
-                }             
-
-                @include underline-from-left;
-            }
-        }
     }    
 }
 
-@include mediaSm{
-    #footer{
-        #top{
+@include mediaSm {
+    #footer {
+        #top {
             width: 100%;
             margin: 0 auto;
 
-            #addr_num{
+            #addr_num {
                 width: 100%;
             }
         }      
         
-        #bottom{
+        #bottom {
             width: 100%;
             margin: 0 auto;
         }
