@@ -14,17 +14,14 @@ function App() {
 
     return (
         <BrowserRouter>
-			<Navbar/>
-			<Navbar />                                              		  {/* 네비게이션 바  */}
-			<ParantDiv>
+			<Navbar />                                              		  {/* 네비게이션 바  */}		
 				<Routes>
 					<Route exact path='/' element={<MainPage />}/>                {/*  메인 페이지   */}
 					<Route path='/intro' element={<IntroPage />}/>                {/*  소개 페이지   */}
 					<Route path='/active' element={<ActivePage />}/>              {/*  활동 페이지   */}
 					<Route path='/contest' element={<ContestPage />}/>            {/*  공모전 페이지 */}
 					<Route path='/manager' element={<ManagerPage />}/> 			  {/*  관리자 페이지 */}
-				</Routes>  
-			</ParantDiv> 
+				</Routes>  		
 			<Footer />                                                 			  {/*  홈페이지 정보 */}
         </BrowserRouter>
     );

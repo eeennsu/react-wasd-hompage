@@ -39,37 +39,30 @@ const Footer = () => {
 					</div>						
 				</div>								
 			</div>					
-			<div id='middle' className='pb-1 text-center border-bottom '>
+			<div id='middle' className='pb-1 text-center border-bottom'>
 				<span className='font_Montserra'><MDBIcon far icon="copyright" />&nbsp; 2023 Copyright WASD all rights reserved.</span>
 			</div>
-			<div id='bottom' className='d-flex pt-1 justify-content-between text-white px-3'>			
-				<MDBTypography listUnStyled className='list'>
+			<div id='bottom' className='text-white'>			
+				<ul className='d-flex w-100 list-unstyled justify-content-around mt-2'>
 					<li>
 						<a href='https://www.mjc.ac.kr/mjcIntro.do'>명지전문대</a>
-					</li>
-					<br />
+					</li>				
 					<li>
 						<a href='https://lib.mjc.ac.kr/'>명지전문대 도서관</a>
-					</li> 										    
-				</MDBTypography>
-				<MDBTypography listUnStyled className='list'>
+					</li> 	
 					<li>	
 						<a href='https://cyber.mjc.ac.kr/'>E-class</a>
-					</li>
-					<br />
+					</li>					
 					<li>
 						<a href='https://icampus.mjc.ac.kr/mjc/sysUser/doView.do'>I-CAMPUS</a>
-					</li>				     
-				</MDBTypography>
-				<MDBTypography listUnStyled className='list'>
+					</li>			
 					<li>
 						<a href='https://cafe.naver.com/swcontent'>소프트웨어 콘텐츠과</a>
-					</li>
-					<br />  					
+					</li>					 					
 					<li>
 						<a href='http://mjcs.mjc.ac.kr/mjcIndex.do'>컴퓨터 공학과</a>
-					</li>				     
-				</MDBTypography>			
+					</li>
+				</ul>							    
 			</div>
 		</MDBFooter>
 	);
