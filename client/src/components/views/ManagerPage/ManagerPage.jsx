@@ -1,16 +1,14 @@
 import { MDBIcon } from 'mdb-react-ui-kit';
-import { Button, Form, Input, Typography } from 'antd';
+import { Button, Form, Input } from 'antd';
 import React, { useCallback } from 'react';
 import { ParentDiv } from '../../styled/eunsu/StyledComponent';
-
 const { Item } 	= Form;
-const { Title } = Typography;
 
-const App = () => {
+const ManagerPage = () => {
 
-	const onFinish = useCallback((values) => {
+	const onFinish = (values) => {
 		console.log(values);
-	}, []);
+	};
 
 	return (
 		<ParentDiv>
@@ -33,4 +31,4 @@ const App = () => {
 	);
 };
 
-export default App;
+export default ManagerPage;

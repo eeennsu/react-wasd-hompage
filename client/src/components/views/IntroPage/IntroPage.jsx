@@ -1,71 +1,77 @@
-import React, { useEffect } from 'react';
-import { useMemo } from 'react';
-import InfoModal from './구버전/InfoModal';
-import IntroCard from './sections/IntroCard';
-import axios from 'axios';
-import { useState } from 'react';
-import { message } from 'antd';
-import Intro_Card from './sections/IntroCard';
-import { ParentDiv } from '../../styled/eunsu/StyledComponent';
+import React, { useEffect, useState } from 'react';
+import InfoCard                      from './sections/InfoCard';
+import axios                          from 'axios';
+import { message, Spin }              from 'antd';
+import { ParentDiv }                  from '../../styled/eunsu/StyledComponent';
+import { useNavigate }                from 'react-router-dom';
+import { CLUB_INFO }                  from '../apiConfig';
 
 const IntroPage = () => {
-
-    /* 
-        [
-            { 
-                content : ~~,
-                detail : ~~,        
-            }    
-        ] 
-    */ 
-    const [introInfos, setIntroInfos] = useState([]);
-    
-    // 더미데이터
-    const cardInfos = useMemo(() => [
-        {
-            title: <span>A Club <br/> Inroduce</span>,           
-            content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla in minima placeat officia pariatur, rem aut omnis beatae labore expedita quas inventore hic incidunt, quis voluptates ex sunt tempore fugit porro repudiandae vero, quo quam ut! Maiores eius deleniti natus odit accusamus minus sed dolorum, labore earum omnis, quos repudiandae sunt quo ratione reiciendis provident nemo eligendi repellendus excepturi tempora illum asperiores. Impedit quam quae, laudantium nam alias doloremque et, accusantium ullam dolor cumque sequi nisi rerum vitae exercitationem ab eligendi facere perspiciatis suscipit consequatur. Sunt, quae laboriosam! Expedita sunt blanditiis adipisci fugiat repellat, error vel maxime omnis corrupti mollitia?'
-        },
-        {
-            title: <span>A Club <br/> Vision</span>,            
-            content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla in minima placeat officia pariatur, rem aut omnis beatae labore expedita quas inventore hic incidunt, quis voluptates ex sunt tempore fugit porro repudiandae vero, quo quam ut! Maiores eius deleniti natus odit accusamus minus sed dolorum, labore earum omnis, quos repudiandae sunt quo ratione reiciendis provident nemo eligendi repellendus excepturi tempora illum asperiores. Impedit quam quae, laudantium nam alias doloremque et, accusantium ullam dolor cumque sequi nisi rerum vitae exercitationem ab eligendi facere perspiciatis suscipit consequatur. Sunt, quae laboriosam! Expedita sunt blanditiis adipisci fugiat repellat, error vel maxime omnis corrupti mollitia?'
-        },
-        {
-            title: <span>A Club <br/> Instructor</span>,       
-            content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla in minima placeat officia pariatur, rem aut omnis beatae labore expedita quas inventore hic incidunt, quis voluptates ex sunt tempore fugit porro repudiandae vero, quo quam ut! Maiores eius deleniti natus odit accusamus minus sed dolorum, labore earum omnis, quos repudiandae sunt quo ratione reiciendis provident nemo eligendi repellendus excepturi tempora illum asperiores. Impedit quam quae, laudantium nam alias doloremque et, accusantium ullam dolor cumque sequi nisi rerum vitae exercitationem ab eligendi facere perspiciatis suscipit consequatur. Sunt, quae laboriosam! Expedita sunt blanditiis adipisci fugiat repellat, error vel maxime omnis corrupti mollitia?'
-        }
-    ], []);
+   
+    const [clubInfos, setClubInfos] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
+    const navigate = useNavigate();
 
     // 서버에서 가져오기
-    // useEffect(() => {
-    //     (async () => {
-    //        try {
-    //         const response = await axios.get('server api link..');
-    //         const { success, results } = response.data;
+    useEffect(() => {
+        const endPoints = [
+            `${CLUB_INFO}/동아리소개`,
+            `${CLUB_INFO}/동아리비전`,
+            `${CLUB_INFO}/동아리교수`
+        ];    
 
-    //         if (success) {
-    //             console.log('Data fatched was successful!');
-    //         } else {
-    //             console.log('Data fatched was failed..');
-    //         }
-    //        } catch (error) {
-    //             console.log(error);
-    //             message.error(error);
-    //        }
-    //     })();
-    // }, []);
+        axios.all(endPoints.map(endPoint => axios.get(endPoint)))
+            .then(axios.spread((res1, res2, res3) => {
+                const resIntroduce  = res1.data;
+                const resVision     = res2.data;
+                const resInstructor = res3.data;
+
+                if (resIntroduce.suc && resVision.suc && resInstructor.suc) {
+                    console.log('data get success!');
+                    
+                    const results = [
+                        {
+                            title: <span>A Club<br/>Introduce</span>,
+                            content: resIntroduce.result.info_content
+                        },
+                        {
+                            title: <span>A Club<br/>Vision</span>,
+                            content: resVision.result.info_content
+                        },
+                        {
+                            title: <span>A Club<br/>Instructor</span>,
+                            content: resInstructor.result.info_content
+                        }
+                    ];
+
+                    setClubInfos([...results]);
+                    setIsLoading(false);
+                } else {
+                    message.error('data get failed..');
+                    navigate('/');
+                }
+            }))
+            .catch((e) => message.error('error...'));
+    }, []);
 
     return (
         <ParentDiv flex justifyCenter alignCenter>
             <section className='intro_parent'>
                 <div className='intro_cards_section row'>
                     {
-                        cardInfos.map(({ title, content }) => (
-                            <div className="col-md-4 mb-4 mb-md-0" key={`intro-${title}`}>
-                                <IntroCard 
-                                    title={title} 
-                                    content={content}                                   
-                                />                                                      
+                        isLoading ? 
+
+                        <Spin tip='Loading' size='large'/>
+
+                        :
+
+                        clubInfos.map(({ title, content }) => (                          
+                            <div className="col-md-4 mb-4 mb-md-0" key={`info-${title}`}>
+                                <InfoCard   
+                                        title={title}                                  
+                                        content={content}
+                                        isLoading={isLoading}                              
+                                />                                                                                      
                             </div>
                         ))
                     }                   
