@@ -6,6 +6,7 @@ import MainPage       	from './components/views/MainPage/MainPage';
 import IntroPage 		from './components/views/IntroPage/IntroPage';
 import ActivePage     	from './components/views/ActivePage/ActivePage';
 import ContestPage    	from './components/views/ContestPage/ContestPage';
+import Contest       	from './components/views/ContestPage/ContestPage';
 import ManagerPage 	 	from './components/views/ManagerPage/ManagerPage';
 import Navbar     	 	from './components/views/Navbar/Navbar';
 import Footer     	 	from './components/views/Footer/Footer';
