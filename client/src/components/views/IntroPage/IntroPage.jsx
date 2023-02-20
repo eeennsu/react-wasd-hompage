@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import InfoCard                      from './sections/InfoCard';
+import InfoCard                       from './sections/InfoCard';
 import axios                          from 'axios';
-import { message, Spin }              from 'antd';
+import { message }                    from 'antd';
 import { ParentDiv }                  from '../../styled/eunsu/StyledComponent';
 import { useNavigate }                from 'react-router-dom';
 import { CLUB_INFO }                  from '../apiConfig';

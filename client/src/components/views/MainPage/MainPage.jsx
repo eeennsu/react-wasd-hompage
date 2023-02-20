@@ -7,23 +7,21 @@ const MainPage = () => {
 	
 	return (
 		// 예시 스타일
-		<ParentDiv>
-        <div className='relative'>
-	     <div className='mainpage_section'>
+		<ParentDiv flex alignCenter >
+        <div className='mainpage_section relative'>
 
-            <div className='text'>
-			<h>Web</h><br/>
-			<h>App</h><br/>
-			<h>Server</h><br/>
-			<h>Desgin</h><br/>
+			<div className='text'>
+				<span>Web</span><br/>
+				<span>App</span><br/>
+				<span>Server</span><br/>
+				<span>Desgin</span><br/>
 			</div>
 
-			<div className='absolute'>
-		     <img className='img' src={process.env.PUBLIC_URL + '/img/MainPage_img.png'}>
-			 </img>
-		    </div>
-		 </div>
-		</div>
+			<div className='img-box'>
+			<img className='img' src={process.env.PUBLIC_URL + '/img/MainPage_img.png'}>
+			</img>
+			</div>
+			</div>
 
 
 
