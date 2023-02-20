@@ -1,0 +1,82 @@
+// .mainpage_section {
+//    display: flex;
+//     width: 70%;
+//     height: 450px;
+//     background: #7c9b6a;
+
+//      margin: 6rem auto;
+//    //   height: auto;
+// }         
+
+// .img {
+//    width: 45%;
+//  height: 45%;
+// margin-left: 35%;
+// border: solid 20px white;
+// border-radius: 100%;
+// }
+
+// 기존 mainpage_section 스타일
+
+
+
+.relative {
+   position: relative;
+}
+
+.absolute {
+   position: absolute;
+}
+
+.text {
+   left: 13%;
+   color: black;
+   font-size: 50px;
+   position: absolute;
+}
+
+
+
+/////  은수 수정 스타일
+.mainpage_section {
+   display: flex;
+   width: 70%;
+   max-width: 1200px;
+   height: 567px;
+   background: rgba($color: #5F8751, $alpha: 0.66);
+   align-items: center;
+   margin: 0 auto;    
+ }
+
+.img-box {
+   position: absolute;
+   right: 3%;
+   width: 60%;
+   max-width: 650px;
+   max-height: 650px;
+}
+
+.img {
+   width: 100%;
+   border: solid 20px white;
+   border-radius: 100%;
+   z-index: 100;
+}
+
+
+@media screen and (max-width: 767px){
+   .mainpage_section {
+      height: 300px;
+   }
+
+   .img-box {
+      position: absolute;
+      right: -15%;
+      width: 75%;
+   } 
+
+   .text {
+      left: 6%;
+      font-size: 28px;
+   }
+}

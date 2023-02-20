@@ -8,6 +8,11 @@
     }
 */
 /* Underline From Left */
+
+.filter_btn {
+  opacity: 0;
+}
+
 .font_Montserrat {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;

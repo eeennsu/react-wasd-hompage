@@ -1,0 +1,49 @@
+.progress_btn {
+  margin-bottom: 5px;
+  width: 10%;
+  color: black;
+  background-color: white;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-right: 10PX;
+  // display: block;
+  font-size: large;
+  font-weight: bold;
+  &.active {
+      background-color: 5F8751;
+      opacity: 66%;
+  }
+}
+
+.category_btn {
+
+  margin-bottom: 5px;
+  width: 8%;
+  color: black;
+  background-color: white;
+  height: 50;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-right: 10PX;
+  // display: block;
+
+  &.active {
+      background-color: 5F8751;
+      opacity: 66%;
+  }
+}
+
+.div {
+  text-align: center;
+}
+
+.btn_hr {
+  width : 95%;
+
+ background-color: rgb(37, 37, 37);
+
+}
+
