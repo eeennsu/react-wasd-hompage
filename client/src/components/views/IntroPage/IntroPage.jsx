@@ -56,13 +56,32 @@ const IntroPage = () => {
             });
     }, []);
 
+    // 서버에서 가져오기
+    // useEffect(() => {
+    //     (async () => {
+    //        try {
+    //         const response = await axios.get('server api link..');
+    //         const { success, results } = response.data;
+
+    //         if (success) {
+    //             console.log('Data fatched was successful!');
+    //         } else {
+    //             console.log('Data fatched was failed..');
+    //         }
+    //        } catch (error) {
+    //             console.log(error);
+    //             message.error(error);
+    //        }
+    //     })();
+    // }, []);
+
     return (
         <ParentDiv flex justifyCenter alignCenter>
             <section className='intro_parent'>
                 <div className='intro_cards_section row'>
                     {
                         clubInfos.map((info, i) => (
-                            <div className="col-md-4 mb-4 mb-md-0" key={`info-${titles[i]}}`}>
+                            <div className="col-md-4 mb-4 mb-md-0 " key={`info-${titles[i]}}`}>
                                 <InfoCard   
                                     title={titles[i]}                                  
                                     content={info}

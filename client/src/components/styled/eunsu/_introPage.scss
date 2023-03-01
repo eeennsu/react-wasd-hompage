@@ -1,5 +1,9 @@
 /* 버전 1 
+<<<<<<< HEAD
+.info_parent{
+=======
 .info_parent {
+>>>>>>> 90af8b77c4aa90997f2591d4dced390496f5650a
     width: 85%;
     margin: 2rem auto 0 auto; 
     height: auto;
@@ -101,15 +105,13 @@
             width: 85%;
             margin: 0 auto;     
         
-            .info_content {
+            .intro_card {
+                width: 100%;
+                height: 400px;
+                text-align: center;
                 margin-right: 0;
-                
-                .intro_card {
-                    text-align: center;
-                    margin-right: 0;
-                    margin-bottom: 1rem;
-                }
-            }          
+                margin-bottom: 1rem;                
+            }       
         }    
     }    
 }

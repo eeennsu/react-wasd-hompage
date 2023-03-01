@@ -8,6 +8,10 @@ export const ParentDiv = styled.section`
     display: ${({ flex }) => (flex && 'flex')}; 
     justify-content: ${({ justifyCenter }) => (justifyCenter && 'center')};
     align-items: ${({ alignCenter }) => (alignCenter && 'center')};
+
+    @media screen and (max-width: 767px){
+        height: auto;
+    };
 `;
 
 export const Container = styled.section`

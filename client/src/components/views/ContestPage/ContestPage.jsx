@@ -23,14 +23,9 @@ function Contest() {
 
   return (
 
-    <ParentDiv>
-      <section style={{ display: 'flex', width: '85%', margin: '2rem auto 0', height: 'auto' }}>
-
-
-        <div> 
-
-          <FilterButtons set_datas={set_datas}/>
-
+    <ParentDiv >
+      <div style={{ width: '66%', margin: '2rem auto 0 auto' }}> 
+        <FilterButtons set_datas={set_datas}/>
           <Container>
             <Row>
               {datas.result && datas.result.map(function (a, i) {
@@ -50,9 +45,7 @@ function Contest() {
               )}
             </Row>
           </Container>
-          
         </div>
-      </section>
     </ParentDiv>
   );
 };

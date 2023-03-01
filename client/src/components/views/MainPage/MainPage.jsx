@@ -1,12 +1,13 @@
 import React from 'react';
 import { ParentDiv } from '../../styled/eunsu/StyledComponent';
-import styles from '../../styled/yongtae/_mainPage.scss';
+import '../../styled/yongtae/_mainPage.scss';
 import styled from "styled-components";
 
 const MainPage = () => {
 	
 	return (
 		// 예시 스타일
+
 		<ParentDiv flex alignCenter >
         <div className='mainpage_section relative'>
 
@@ -22,7 +23,6 @@ const MainPage = () => {
 			</img>
 			</div>
 			</div>
-
 
 
 		</ParentDiv>		

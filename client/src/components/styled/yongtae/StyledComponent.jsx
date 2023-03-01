@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const ParentDiv = styled.section`
-    min-height: calc(100vh - 150spx);    // footer의 크기만큼 빼기
+    //min-height: calc(100vh - 150spx);    // footer의 크기만큼 빼기
     padding-top: 11vh;                  // nav의 height 크기만큼 적용하기
     margin: 0;
     background-color: #9DC78E;        // 크기, 위치 확인용 배경색   
