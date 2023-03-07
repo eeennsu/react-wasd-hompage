@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import styled from "styled-components";
 import dummy_data from "./dummy_data"
 import { Button, Navbar, Container, Nav, Row, Col } from 'react-bootstrap';
-import { ParentDiv } from '../../styled/yongtae/StyledComponent';
+import { ParentDiv } from '../../styled/eunsu/StyledComponent';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import FilterButtons from './FilterButtons';
@@ -24,7 +24,7 @@ function Contest() {
   return (
 
     <ParentDiv>
-      <section style={{ display: 'flex', width: '85%', margin: '2rem auto 0', height: 'auto' }}>
+      <div>
 
 
         <div> 
@@ -52,7 +52,7 @@ function Contest() {
           </Container>
           
         </div>
-      </section>
+      </div>
     </ParentDiv>
   );
 };

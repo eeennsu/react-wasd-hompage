@@ -9,7 +9,7 @@ const serverEndPoints = [
 
 // 동아리에 관한 정보를 데이터베이스에서 불러오는 커스텀 훅
 const useClubInfo = () => {
-
+    
     // react-query의 useQuerys는 각각 3개의 쿼리들을 한번에 묶어 호출하여 효율적인 네트워크 통신을 도와준다.
     const queries = serverEndPoints.map((point) => ({
         queryKey: ['clubInfo', point],                                       
