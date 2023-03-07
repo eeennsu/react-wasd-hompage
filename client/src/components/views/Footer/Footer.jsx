@@ -6,13 +6,13 @@ import { Popover } 			  from 'antd';
 
 const Footer = () => {
 
-
 	return (
 		<MDBFooter className='footer'>		
 			<div className='top d-md-flex justify-content-center align-items-center'>
 				<div className='d-none d-lg-block'>
 					<Popover title='WASD Logo' content={<img src={logo_wasd_large} alt='logo' />}>
-						<img src={logo_wasd} alt='logo' className='logo_wasd' />
+						<img src={logo_wasd} alt='git reset HEAD
+						logo' className='logo_wasd' />
 					</Popover>					
 				</div>
 				<div className='addr_num p-2 p-md-0'>
@@ -38,25 +38,25 @@ const Footer = () => {
 				<span className='font_Montserra'><MDBIcon far icon="copyright" />&nbsp; 2023 Copyright WASD all rights reserved.</span>
 			</div>
 			<div className='bottom mt-3'>			
-				<ul className='d-flex w-100 list-unstyled justify-content-around'>
-					<li>
+				<ul className='d-flex row w-100 list-unstyled justify-content-around text-center'>
+					<div className='col-md-2 col-4'>
 						<a href='https://www.mjc.ac.kr/mjcIntro.do'>명지전문대</a>
-					</li>				
-					<li>
-						<a href='https://lib.mjc.ac.kr/'>명지전문대 도서관</a>
-					</li> 	
-					<li>	
+					</div>				
+					<div className='col-md-2 col-4'>
+						<a href='https://divb.mjc.ac.kr/'>명지전문대 도서관</a>
+					</div> 	
+					<div className='col-md-2 col-4'>	
 						<a href='https://cyber.mjc.ac.kr/'>E-class</a>
-					</li>					
-					<li>
+					</div>					
+					<div className='col-md-2 col-4'>
 						<a href='https://icampus.mjc.ac.kr/mjc/sysUser/doView.do'>I-CAMPUS</a>
-					</li>			
-					<li>
-						<a href='https://cafe.naver.com/swcontent'>소프트웨어 콘텐츠과</a>
-					</li>					 					
-					<li>
-						<a href='http://mjcs.mjc.ac.kr/mjcIndex.do'>컴퓨터 공학과</a>
-					</li>
+					</div>			
+					<div className='col-md-2 col-4'>
+						<a href='https://cafe.naver.com/swcontent'>소프트웨어콘텐츠과</a>
+					</div>					 					
+					<div className='col-md-2 col-4'>
+						<a href='http://mjcs.mjc.ac.kr/mjcIndex.do'>컴퓨터공학과</a>
+					</div>
 				</ul>							    
 			</div>
 		</MDBFooter>
