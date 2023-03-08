@@ -1,0 +1,57 @@
+@import './hover_css/underline-from-left';
+
+.footer {
+    width: 100%;
+    height: 150px;
+    margin: 0 auto;
+    white-space: nowrap;
+
+    .top {
+        width: 60%;
+        margin: 0 auto;
+        font-size: 0.9em;   
+
+        img.logo_wasd {
+            width: 70%;
+        }
+
+        .infos {
+            color: grey;
+        }
+
+        .addr_num {
+            width: 60%;
+        }
+    }
+
+    .middle {
+        font-size: 0.8em;
+        width: 60%;
+        color: rgb(75, 75, 65);
+        letter-spacing: 1px;
+        margin: 0 auto;
+    }
+
+    .bottom {
+        width: 60%;
+        margin: 0 auto;
+    }    
+}
+
+@include mediaSm {
+    .footer {
+        .top {
+            width: 100%;
+            margin: 0 auto;
+
+            .addr_num {
+                width: 100%;
+            }
+        }      
+        
+        .bottom {
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+}

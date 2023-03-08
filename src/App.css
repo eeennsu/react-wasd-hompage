@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Alkalami&family=Bungee+Spice&family=Dancing+Script&family=Edu+TAS+Beginner:wght@500;600&family=Gamja+Flower&family=Gowun+Batang&family=Gowun+Dodum&family=IBM+Plex+Sans+KR:wght@500&family=Lobster&family=Montserrat:ital,wght@0,100;1,400&family=Nanum+Gothic+Coding&family=Nanum+Pen+Script&family=Nunito:ital,wght@1,300&family=Open+Sans:wght@300&family=Poor+Story&family=Roboto:wght@100;400;500&family=Shadows+Into+Light&display=swap");
+/*
+    @include mediaSm{
+        div{
+            color: black;
+            margin: 0 auto;
+        }
+    }
+*/
+/* Underline From Left */
+
+.filter_btn {
+  opacity: 0;
+}
+
+.font_Montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+#footer {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  border-top: 6px solid rgb(234, 237, 250);
+  background: rgb(200, 206, 228);
+}
+#footer #top {
+  width: 45%;
+  margin: 0 auto;
+  font-size: 0.9em;
+}
+#footer #top .infos {
+  color: grey;
+}
+#footer #middle {
+  font-size: 0.8em;
+  color: rgb(75, 75, 65);
+  letter-spacing: 1px;
+}
+#footer #bottom {
+  width: 35%;
+  margin: 0 auto;
+  /*#logo_mjc{
+    width: 200px;
+    height: 150px;
+  }*/
+}
+#footer #bottom .list li {
+  display: inline-block;
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+#footer #bottom .list li a {
+  color: rgb(56, 52, 44);
+  font-size: 0.8em;
+}
+#footer #bottom .list li:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  background: rgb(234, 237, 250);
+  height: 3px;
+  transition-property: right;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+}
+#footer #bottom .list li:hover:before, #footer #bottom .list li:focus:before, #footer #bottom .list li:active:before {
+  right: 0;
+}
+
+@media screen and (max-width: 767px) {
+  #footer #top {
+    width: 100%;
+    margin: 0 auto;
+  }
+  #footer #bottom {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+#intro_img {
+  position: relative;
+  height: 35vh;
+  width: 85%;
+  margin: 0 auto;
+  background-image: url("./imgs/web-design-desk.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+#intro_img #intro_content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 5rem;
+  color: white;
+  z-index: 2;
+  text-align: center;
+  letter-spacing: 4px;
+}
+#intro_img #intro_img_cover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}/*# sourceMappingURL=App.css.map */

@@ -1,0 +1,161 @@
+
+
+.active_content{
+    margin-left: 150px;
+    width: 500px;
+    padding-top: 30px;
+    z-index: 20;   
+
+    img{
+        width:150px;
+        height: 200px;
+        bottom: 300px;
+        margin-right:-280px;
+        margin-top: -60px;
+        float:right;
+        z-index: 20;
+
+    
+       }
+}
+
+.active_body{
+    margin-left: 6px;
+    line-height: 30px;
+    margin-top: 15px;
+    z-index: 20;
+
+
+}
+
+
+.parent {
+    min-height: calc(100vh - 150px);    /* 모든 페이지의 최소 높이는 화면전체 높이에서 footer의 크기인 150px만큼 빼야 한다*/
+    padding-top: 11vh;                  /* navbar의 크기만큼 패팅탑을 준다. navbar의 크기에 따라서 변경 */
+    margin: 0;
+    background-color: #9DC78E;      
+}
+
+.main{
+    width: 100%;                        
+	display: flex;                      /* 길게 늘리기 */
+	justify-content: center;            /* 가로 가운데 정렬 */  
+	align-items: center;                /* 세로 가운데 정렬 */
+}
+
+.container {
+    display: flex;                      
+	flex-direction: column;             /* 길게 늘리고 열방향으로 순서 변경 */
+	justify-content: center;            /*   세로 가운데 정렬 (열방향이 변경되면 가로세로 방향도 변경) */ 
+    align-items: center;                /*  가로 가운데 정렬 */
+	margin: 3rem auto;  
+}
+
+.white_box_wrapper {
+    position: relative;                 /* 회색 막대기의 중심 포지션을 위해 설정 */
+    margin-bottom: 50px;
+}
+
+.white_box_wrapper:last-of-type {       /* 마지막 부분의 css는 제외 */
+    margin-bottom: 0;
+    margin-top: -48px;
+}
+
+.white_box {                            
+    background-color: #FFFFFF;         
+	width: 1055px;          
+	height: 232px;
+	border-radius: 10px;	
+	display: flex;  
+    z-index: 5;       
+    
+    position: relative;
+    
+    &:not(:last-of-type) {
+        margin-top: -48px;
+    }
+}
+
+.left_top_circle {
+    background-color: #9DC78E;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	z-index: 10;
+	position: absolute;
+	left: 43px;
+    top: 10px;
+    // margin-left: 280px;
+    // margin-top: 70px;
+
+
+}
+
+.right_top_circle {
+    background-color: #9DC78E;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	z-index: 10;
+	position: absolute;
+	right: 43px;
+    top: 10px;
+    // margin-left: 280px;
+    // margin-top: 70px;
+
+
+}
+
+.left_bottom_circle {
+    background-color: #9DC78E;
+    width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	z-index: 10;
+	position: absolute;
+    left: 43px;
+    bottom: 10px;
+    // margin-left: 280px;
+
+}
+
+.right_bottom_circle {
+    background-color: #9DC78E;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	z-index: 10;                    /* white_box 보다 더 앞에 보여야 한다 */
+	position: absolute;
+	right: 43px;
+    bottom: 10px;
+    // margin-left: 280px;
+
+
+}
+
+.info {
+    width: 80%;
+	margin: auto;                   
+}
+
+.left_line {
+    background-color: #D9D9D9;
+	width: 3px;
+	height: 70px;
+	z-index: 20;                    /* circle 보다 더 앞에 보여야 하므로 더 높게 설정 */
+	position: absolute;
+    bottom: -60px;
+    left: 62px;
+    // margin-left: 280px;
+
+}
+
+.right_line {
+    background-color: #D9D9D9;
+	width: 3px;
+	height: 70px;
+	z-index: 20;
+	position: absolute;
+    bottom: -60px;
+    right: 62px;
+}

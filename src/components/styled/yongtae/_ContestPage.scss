@@ -1,0 +1,136 @@
+.progress_btn {
+  margin-bottom: 5px;
+  width: 10%;
+  color: black;
+  background-color: white;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-right: 10PX;
+  // display: block;
+  font-size: large;
+  font-weight: bold;
+  &.active {
+      background-color: 5F8751;
+      opacity: 66%;
+  }
+}
+
+.category_btn {
+
+  margin-bottom: 5px;
+  width: 8%;
+  color: black;
+  background-color: white;
+  height: 50;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-right: 10PX;
+  // display: block;
+
+  &.active {
+      background-color: 5F8751;
+      opacity: 66%;
+  }
+}
+
+.div {
+  text-align: center;
+}
+
+.contest_div {
+  position: relative;
+  margin-bottom: 10px;
+  text-align: center;
+  // margin: px;
+  background-color:  #ffffff;
+  padding: 5px;
+  border-radius: 10px;
+  height : 95%;
+  cursor: pointer;
+  border: 1px solid  #ececec;
+}
+
+.contest_developmentFields_div {
+
+  margin: auto;
+  margin-top: 5px;
+  margin-bottom: -15px;
+  width: 30%;
+  border-radius: 15px;
+  text-align: center;
+  background-color:  #9DC78E;
+  color: #f5f5f5;
+  border: 1px solid  #80a173;
+
+}
+
+.contest_content_div {
+  white-space: nowrap;
+overflow:hidden;
+text-overflow: ellipsis;
+// line-height: 90%;
+  margin: auto;
+  margin-top: 5px;
+width: 90%;
+
+  border-radius: 5px;
+  text-align: center;
+  color: #343434;
+  border: 1px solid #80a173;
+}
+
+.contest_content {
+  margin-top: 3%;
+  white-space: nowrap;
+overflow:hidden;
+text-overflow: ellipsis; 
+
+font-size: large;
+font-weight: bold;
+
+}
+
+.contest_agency {
+
+  white-space: nowrap;
+overflow:hidden;
+text-overflow: ellipsis;
+font-size: small;
+color: #585858;
+}
+
+.contest_schedule {
+
+  margin: 0 auto;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  width: 90%;
+  border-radius: 5px;
+  text-align: center;
+  background-color:  #7c9e6f;
+  color: white;
+  border: 1px solid #5f7855;
+
+}
+
+.btn_hr {
+
+ background-color: rgb(37, 37, 37);
+
+}
+
+.datas_sort{
+  margin-top: 30px;
+}
+
+
+
+// .contest_datas_sort {
+//   position: absolute;
+//   top: 90%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+// }
