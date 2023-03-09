@@ -1,57 +1,82 @@
 import React from 'react';
 import { useState, useEffect } from "react";
 import styled from "styled-components";
-import dummy_data from "./dummy_data"
 import { Button, Navbar, Container, Nav, Row, Col } from 'react-bootstrap';
-import { ParentDiv } from '../../styled/eunsu/StyledComponent';
+import { ParentDiv } from '../../styled/yongtae/StyledComponent';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import FilterButtons from './FilterButtons';
+import styles from '../../styled/yongtae/_ContestPage.scss';
+import Pagination from "react-js-pagination";
+import '../../styled/yongtae/_Paging.scss';
 
 function Contest() {
 
   let [datas, set_datas] = useState([]);
+  // 렌더링 될 데이터
 
-    useEffect(() => {
-      axios.get('board/getBoardPagination/공모전/1/12')
-        .then((response)=> { set_datas(response.data); console.log(response.data) })
-    }, []);
+  let [page, set_page] = useState(1);
+  // 현재 페이지
 
-    useEffect(() => {
-      console.log("성공")
-    }, [datas])
+  let handlePageChange = (page) => {
+    set_page(page);
+  };
+
+  useEffect(() => {
+    axios.get(`board/allPagination/All/${page}/12`)
+      .then((response) => { set_datas(response.data); })
+  }, []); // 초기 렌더링 데이터
+
+  let [max_pagination, set_max_pagination] = useState(datas.length); // 필터링 된 데이터들의 수
+
+  console.log(datas)
 
   return (
 
-    <ParentDiv>
-      <div>
+    <ParentDiv >
+      <div style={{ width: '66%', margin: '2rem auto 0 auto' }}>
 
+        <FilterButtons set_page={set_page} page={page} set_datas={set_datas} set_max_pagination={set_max_pagination} />
 
-        <div> 
+        <Container>
+          <Row>
+            {datas.result && datas.result.map(function (a, i) {
+              return (
 
-          <FilterButtons set_datas={set_datas}/>
+                <Col sm={3}>
+                  <div className='contest_div' onClick={() => { window.open(`${datas.result[i].board_url}`, '_blank') }}>
+                    {/* 공모전 링크 */}
 
-          <Container>
-            <Row>
-              {datas.result && datas.result.map(function (a, i) {
-                return (
-                  
-                  <Col sm={3}>
-                    {/* <Link to="/https://happybean.naver.com/rbundle/2011"> */}
-                    <img src={process.env.PUBLIC_URL + '/img/dummy_poster' + (i + 1) + '.png'} width="80%" />
-                    <h5>{datas.result[i].board_content}</h5>
-                    <p>{datas.result[i].board_developmentFields}</p>
-                    <p>{datas.result[i].board_end == true ? "진행종료" : "진행중"}</p>
-                    {/* </Link> */}
-                  </Col>
-                  
-                )
-              }
-              )}
-            </Row>
-          </Container>
-          
-        </div>
+                    <div className='contest_developmentFields_div'>{datas.result[i].board_developmentFields}</div> {/* 공모전 카테고리 */}
+                    <img className='datas_sort' src={datas.result[i].board_url_link} width="80%" /> {/* 공모전 포스터 */} 
+
+                    <div className='contest_datas_sort'>
+                      <div className='contest_content_div'>
+                    <p className='contest_content'>{datas.result[i].board_content}</p> {/* 공모전 이름 */}
+                    <p className='contest_agency'>{datas.result[i].board_agency}</p> {/* 공모전 주최기관 */}
+                    </div>
+                    <p className='contest_schedule'>{datas.result[i].board_schedule}</p> {/* 공모전 기간 */}
+                    </div>
+
+                  </div>
+                </Col>
+
+              )
+            }
+            )}
+          </Row>
+        </Container>
+
+        <Pagination
+          activePage={page}
+          itemsCountPerPage={12} // 한 페이지에 보여질 데이터 수
+          totalItemsCount={max_pagination} // 최대 데이터 수, totalItemsCount / itemsCountPerPage = 페이지 수
+          pageRangeDisplayed={5}
+          prevPageText={"‹"}
+          nextPageText={"›"}
+          onChange={handlePageChange} // page 변경 함수
+        />
+
       </div>
     </ParentDiv>
   );
