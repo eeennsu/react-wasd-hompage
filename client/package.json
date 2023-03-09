@@ -19,6 +19,8 @@
     "react-bootstrap": "^2.7.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.43.1",
+    "react-js-pagination": "^3.0.3",
+    "react-query": "^3.39.3",
     "react-router-dom": "^6.6.1",
     "react-scripts": "^5.0.1",
     "sass": "^1.58.3",
@@ -50,5 +52,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://121.162.63.25:3001"
+  "proxy": "http://121.131.192.184:3001"
 }

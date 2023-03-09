@@ -8,6 +8,8 @@ export const ParentDiv = styled.section`
     display: ${({ flex }) => (flex && 'flex')}; 
     justify-content: ${({ justifyCenter }) => (justifyCenter && 'center')};
     align-items: ${({ alignCenter }) => (alignCenter && 'center')};
+    border-right: 22px solid #fff;
+    border-left: 22px solid #fff;
 `;
 
 export const Container = styled.section`

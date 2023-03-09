@@ -1,17 +1,48 @@
 import React from 'react';
+import '../../styled/soyeon/_navber.scss';
+
+
 
 const Navbar = () => {
 	return (
 		// 예시 스타일
-		<nav style={{ zIndex: 100, display: 'flex', background: 'skyblue', width: '100%', position: 'fixed', height: '11vh' }}>
-			<div style={{  }}>
-				<a href='/'>MainPage</a><br/>
-				<a href='/intro'>IntroPage</a><br/>
-				<a href='/active'>ActivePage</a><br/>
-				<a href='/contest'>ContestPage</a><br/>
-				<a href='/manager'>ManagerPage</a>
-			</div>
+
+		
+		<nav style={{ height: '11vh', backgroundColor:'#9DC78E', width: '100%', margin : '0 auto', borderRight: '22px solid #fff', borderLeft: '22px solid #fff'}}>
+
+              <div className='box'/>
+
+                <div className='line_top'>
+				<div className='circle_top'/>
+				</div>
+				<div className='line'/>
+                <div className='line_bottom'>
+                <div className='circle_bottom'/>
+				</div>
+
+			    <div className='nav'>
+				<a href='/'>WASD</a><br/>
+				</div>
+                
+				<div className='in'>
+				<a href='/intro'>Introduction</a><br/>
+				</div>
+				<div className='ac'>
+				<a href='/active'>Activity</a><br/>
+				</div>
+				<div className='co'>
+				<a href='/contest'>Contest</a><br/>
+				</div>
+				<div className='ma'>
+				<a href='/manager'>Manager</a>
+				</div>
+
+			
+				
+				
 		</nav>
+
+
 	);
 };
 
